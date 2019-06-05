@@ -1,6 +1,6 @@
-class Songs (val titel : String, val interpret : String, val spieldauer: Int, bewertung_param : Int ) { // ÄNDERN Bewertung darf nicht unter 0 und über 100 erstellt werden
+class Songs (val titel : String, val interpret : String, val spieldauer: Int, bewertung : Int ) { // ÄNDERN Bewertung darf nicht unter 0 und über 100 erstellt werden
 
-    var bewertung = bewertung_param
+    var bewertung = bewertung
     set(value) {
             if (value < 0) field = 0
             if (value > 100) field = 100
@@ -8,7 +8,7 @@ class Songs (val titel : String, val interpret : String, val spieldauer: Int, be
      }
 
     init {
-        bewertung = bewertung_param
+        this.bewertung = bewertung
     }
 
     fun abspielen() {
